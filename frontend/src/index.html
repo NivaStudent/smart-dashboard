@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Smart Dashboard</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/style.css">
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="description" content="Smart Dashboard — модульная платформа для продуктивности">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">📊</span>
+                <h1>Smart Dashboard</h1>
+            </div>
+            <div class="user-info">
+                <span class="user-name" id="user-name">Иван</span>
+                <span class="user-points" id="user-points">🏆 0</span>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+        </header>
+        
+        <nav class="app-nav">
+            <button class="nav-btn" data-route="tracker" data-active="true">📊 Трекер</button>
+            <button class="nav-btn" data-route="tasks">✅ Задачи</button>
+            <button class="nav-btn" data-route="habits">💪 Привычки</button>
+            <button class="nav-btn" data-route="notes">📝 Заметки</button>
+        </nav>
+        
+        <main id="app-main" class="app-main">
+            <div class="loading">Загрузка...</div>
+        </main>
+        
+        <footer class="app-footer">
+            <div class="status">
+                <span id="online-status" class="status-online">● Онлайн</span>
+            </div>
+            <div class="sync-info">
+                <span id="last-sync"></span>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
